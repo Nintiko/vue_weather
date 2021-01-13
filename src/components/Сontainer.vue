@@ -3,6 +3,7 @@
     <Temperature />
     <FlexBreak />
     <Humidity />
+    <VerticalDivider />
   </div>
 </template>
 
@@ -10,12 +11,15 @@
 import Temperature from "./Temperature.vue";
 import FlexBreak from "./FlexBreak.vue";
 import Humidity from "./Humidity.vue";
+import VerticalDivider from "./VerticalDivider.vue";
+
 export default {
   name: "Container",
   components: {
     Temperature,
     FlexBreak,
     Humidity,
+    VerticalDivider,
   },
 };
 </script>
