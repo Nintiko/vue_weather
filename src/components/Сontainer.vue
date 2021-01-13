@@ -1,15 +1,21 @@
 <template>
   <div class="informer-container">
-      <Temperature/>
+    <Temperature />
+    <FlexBreak />
+    <Humidity />
   </div>
 </template>
 
 <script>
 import Temperature from "./Temperature.vue";
+import FlexBreak from "./FlexBreak.vue";
+import Humidity from "./Humidity.vue";
 export default {
   name: "Container",
-  components:{
-      Temperature,
+  components: {
+    Temperature,
+    FlexBreak,
+    Humidity,
   },
 };
 </script>
