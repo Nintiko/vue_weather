@@ -1,9 +1,10 @@
 <template>
   <div class="informer-container">
-    <Temperature />
+    <Temperature :real="weather.TemperatureReal" :feel="weather.TemperatureFeel" />
     <FlexBreak />
-    <Humidity />
+    <Humidity :val="weather.HumidityVal" />
     <VerticalDivider />
+    <Wind :val="weather.WindVal" />
   </div>
 </template>
 
@@ -12,14 +13,17 @@ import Temperature from "./Temperature.vue";
 import FlexBreak from "./FlexBreak.vue";
 import Humidity from "./Humidity.vue";
 import VerticalDivider from "./VerticalDivider.vue";
+import Wind from "./Wind.vue";
 
 export default {
   name: "Container",
+  props:['weather'],
   components: {
     Temperature,
     FlexBreak,
     Humidity,
     VerticalDivider,
+    Wind,
   },
 };
 </script>

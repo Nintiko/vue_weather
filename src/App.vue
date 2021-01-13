@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Container/>
+    <Container :weather="weather" />
   </div>
 </template>
 
@@ -10,6 +10,16 @@ export default {
   name: "App",
   components: {
     Container,
+  },
+  data() {
+    return {
+      weather: {
+        TemperatureReal: -2,
+        TemperatureFeel: -3.5,
+        HumidityVal: 25,
+        WindVal: 13,
+      }
+    }
   },
 };
 </script>
@@ -26,6 +36,10 @@ body {
   justify-content: center;
   height: 100vh;
   background: rgb(244, 123, 186);
-  background: linear-gradient(-25deg, rgba(244, 123, 186, 0.5) 20%, rgba(90, 95, 245, 0.5) 80%);
+  background: linear-gradient(
+    -25deg,
+    rgba(244, 123, 186, 0.5) 20%,
+    rgba(90, 95, 245, 0.5) 80%
+  );
 }
 </style>
