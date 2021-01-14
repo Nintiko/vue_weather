@@ -21,6 +21,29 @@ export default {
       }
     }
   },
+  methods:{
+    getWeatherInfo(){
+      this.axios.get('http://37.77.104.246/api/weather/temp.php')
+        .then((response)=>{
+          this.weather.TemperatureReal = response.data;
+        });
+      this.axios.get('http://37.77.104.246/api/weather/feel.php')
+        .then((response)=>{
+          this.weather.TemperatureFeel = response.data;
+        });
+      this.axios.get('http://37.77.104.246/api/weather/humidity.php')
+        .then((response)=>{
+          this.weather.HumidityVal = response.data;
+        });
+      this.axios.get('http://37.77.104.246/api/weather/wind.php')
+        .then((response)=>{
+          this.weather.WindVal = response.data;
+        });
+    }
+  },
+  mounted(){
+    this.getWeatherInfo();
+  }
 };
 </script>
 
